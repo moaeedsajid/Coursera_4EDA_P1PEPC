@@ -57,17 +57,17 @@ if (debugmode == "1") {
 }
 
 
-print ("Plotting to Console")
+print ("Plotting directly to png file")
+png("plot3.png", width = 480, height = 480, units = "px")
 plot(plotDs$Sub_metering_1, pch = NA, ylab = "Energy sub metering", xlab = "", type = "l", axes = FALSE)
 lines(plotDs$Sub_metering_2, pch = NA, col = "Red")
 lines(plotDs$Sub_metering_3, pch = NA, col = "Blue")
-legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("Black", "Red", "Blue"), lty = 1)
+legend("topright", legend = c("Sub_metering_1 ", "Sub_metering_2 ", "Sub_metering_3 "), col = c("Black", "Red", "Blue"), lty = 1)
 axis(2, at = c(0,10,20,30))
 axis(1, at = c(0, 1440, 2880), lab = c("Thu", "Fri", "Sat"))
 box()
 
-# Exporting plot to png
-dev.copy(png, file = "plot3.png")
+# Close out the png file
 dev.off()
 print ("Plot exported to plot3.png")
 

@@ -61,7 +61,7 @@ axis(1, at = c(0, 1440, 2880), lab = c("Thu", "Fri", "Sat"))
 box()
 
 # Exporting plot to png
-dev.copy(png, file = "plot2.png")
+dev.copy(png, width=480, height= 480, file = "plot2.png")
 dev.off()
 print ("Plot exported to plot2.png")
 
