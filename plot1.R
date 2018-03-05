@@ -44,7 +44,7 @@ print(head(plotOneDs,2))
 print(tail(plotOneDs,2))
 
 print ("Plotting to Console")
-hist(plotOneDs$GAP, col = "Red", xlab = "Global Active Power (kilowatts", main = "Global Active Power")
+hist(plotOneDs$GAP, col = "Red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
 
 # Exporting plot to png
 dev.copy(png, width=480, height= 480, file = "plot1.png")
